@@ -254,11 +254,11 @@
 
       <div class="contact-form">
         <form onsubmit="sendContact(event)">
-          <input type="name" placeholder="Your Name" required="" for="nameInput" id="nameInput" />
-          <input type="email" placeholder="Your Email Address Here" required="" for="emailInput" id="emailInput" />
-          <input type="" placeholder="Your Phone Number (Optional)" for="numberInput" id="numberInput" />
-          <textarea name="" id="" cols="35" rows="10" placeholder="Fill your message here" required="" for="messageInput" id="messageInput"></textarea>
-          <input type="submit" value="Send Message" class="submit" required="" />
+          <input type="name" placeholder="Your Name" required="" id="nameInput" />
+          <input type="email" placeholder="Insert Your Email Here" id="emailInput" />
+          <input type="" placeholder="Your Phone Number (Optional)" id="numberInput" />
+          <textareas cols="35" rows="10" placeholder="Fill your message here" required="" id="messageInput"></textareas>
+          <button type="submit" class="btn" required="">Send Message</button>
         </form>
       </div>
     </section>
@@ -294,8 +294,7 @@
     <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll('.box'));
-    </script>
-    <script>
+
       async function sendContact(ev) {
         ev.preventDefault();
 
