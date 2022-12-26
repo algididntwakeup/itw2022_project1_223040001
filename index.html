@@ -30,7 +30,7 @@
     <section class="hero" id="home">
       <div class="hero-text">
         <h5>Pengen jadi Web Developer</h5>
-        <h4>Hi! I'm</h4>
+        <h4>Hola! Soy</h4>
         <h1 data-target-resolver></h1>
         <p>Maba Fakultas Teknik Informatika UNPAS yang punya cita cita pengen jadi orang yang sukses di bidang IT.</p>
         <div class="button">
@@ -253,11 +253,11 @@
       </div>
 
       <div class="contact-form">
-        <form>
-          <input type="name" placeholder="Your Name" required="" for="nameInput" />
-          <input type="email" placeholder="Your Email Address Here" required="" for="emailInput" />
-          <input type="" placeholder="Your Phone Number (Optional)" for="numberInput" />
-          <textarea name="" id="" cols="35" rows="10" placeholder="Fill your message here" required="" for="messageInput"></textarea>
+        <form onsubmit="sendContact(event)">
+          <input type="name" placeholder="Your Name" required="" for="nameInput" id="nameInput" />
+          <input type="email" placeholder="Your Email Address Here" required="" for="emailInput" id="emailInput" />
+          <input type="" placeholder="Your Phone Number (Optional)" for="numberInput" id="numberInput" />
+          <textarea name="" id="" cols="35" rows="10" placeholder="Fill your message here" required="" for="messageInput" id="messageInput"></textarea>
           <input type="submit" value="Send Message" class="submit" required="" />
         </form>
       </div>
@@ -294,6 +294,46 @@
     <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll('.box'));
+    </script>
+    <script>
+      async function sendContact(ev) {
+        ev.preventDefault();
+
+        const senderName = document.getElementById('nameInput').value;
+        const senderEmail = document.getElementById('emailInput').value;
+        const senderNumber = document.getElementById('numberInput').value;
+        const senderMessage = document.getElementById('messageInput').value;
+
+        const webhookBody = {
+          embeds: [
+            {
+              title: 'Pesan Baru niechh',
+              fields: [
+                { name: 'Name', value: senderName },
+                { name: 'Sender', value: senderEmail },
+                { name: 'Number', value: senderNumber },
+                { name: 'Message', value: senderMessage },
+              ],
+            },
+          ],
+        };
+
+        const webhookUrl = 'https://discord.com/api/webhooks/1056927181730746389/2EACF3YfKFpudMMrE0n-qbvzINOF8C4CNK3AS86ZpQgQ55EoevTfEviKll9ymgHX3Tav';
+
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+          alert('Pesan Berhasil Terkirim!');
+        } else {
+          alert('Mff untuk pengiriman email masi ada kendala!');
+        }
+      }
     </script>
   </body>
 </html>
