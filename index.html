@@ -1,6 +1,3 @@
-<?php
-require_once ('config.php');
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -256,13 +253,11 @@ require_once ('config.php');
       </div>
 
       <div class="contact-form">
-        <form method="POST" action="discord-post.php">
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="Ada email baru nichh" />
-          <input type="name" placeholder="Your Name" required="" />
-          <input type="email" placeholder="Your Email Address Here" required="" />
-          <input type="" placeholder="Your Phone Number (Optional)" />
-          <textarea name="" id="" cols="35" rows="10" placeholder="Fill your message here" required=""></textarea>
+        <form>
+          <input type="name" placeholder="Your Name" required="" for="nameInput" />
+          <input type="email" placeholder="Your Email Address Here" required="" for="emailInput" />
+          <input type="" placeholder="Your Phone Number (Optional)" for="numberInput" />
+          <textarea name="" id="" cols="35" rows="10" placeholder="Fill your message here" required="" for="messageInput"></textarea>
           <input type="submit" value="Send Message" class="submit" required="" />
         </form>
       </div>

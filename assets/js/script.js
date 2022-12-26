@@ -141,3 +141,43 @@ function callback() {
 }
 
 resolver.resolve(options, callback);
+
+// webhook forms
+async function sendContact(ev) {
+  ev.preventDefault();
+
+  const senderName = document.getElementById('nameInput').value;
+  const senderEmail = document.getElementById('emailInput').value;
+  const senderNumber = document.getElementById('numberInput').value;
+  const senderMessage = document.getElementById('messageInput').value;
+
+  const webhookBody = {
+    embeds: [
+      {
+        title: 'Pesan Baru niechh',
+        fields: [
+          { name: 'Name', value: senderName },
+          { name: 'Sender', value: senderEmail },
+          { name: 'Number', value: senderNumber },
+          { name: 'Message', value: senderMessage },
+        ],
+      },
+    ],
+  };
+
+  const webhookUrl = 'https://discord.com/api/webhooks/1056927181730746389/2EACF3YfKFpudMMrE0n-qbvzINOF8C4CNK3AS86ZpQgQ55EoevTfEviKll9ymgHX3Tav';
+
+  const response = await fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(webhookBody),
+  });
+
+  if (response.ok) {
+    alert('Pesan Berhasil Terkirim!');
+  } else {
+    alert('Mff untuk pengiriman email masi ada kendala!');
+  }
+}
