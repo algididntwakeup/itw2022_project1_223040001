@@ -1,0 +1,102 @@
+ini buat yang gada animasi animasi
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.row img {
+  height: auto;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.row {
+  padding: 25px;
+  background: #202a49;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+}
+.main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.row h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.row h6 {
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.row-icon i {
+  font-size: 21px;
+}
+.row:hover {
+  transform: scale(1.01) translateY(-5px);
+  cursor: pointer;
+} 
+
+<div class="portfolio-content">
+			<div class="row">
+
+				<img src="assets/img/tourntrav.png">
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Development</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Mobile app landing design & Services</h3>
+			</div>
+
+			<div class="row">
+				<img src="assets/img/pengaduan.png">
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Development</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Mobile app landing design & Services</h3>
+			</div>
+
+			<div class="row">
+				<img src="assets/img/finata.png">
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Development</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Mobile app landing design & Services</h3>
+			</div>
+
+			<div class="row">
+				<img src="assets/img/ionix.png">
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Development</h6>
+					</div>
+					<div class="row-icon">
+						<i class='bx bx-heart'></i>
+					</div>
+				</div>
+				<h3>Mobile app landing design & Services</h3>
+			</div>
+		</div>
+      </div> 
+
+      /// ini buat yg naik turun 
