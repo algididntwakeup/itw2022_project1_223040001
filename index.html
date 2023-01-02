@@ -175,61 +175,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="portfolio-content">
-			<div class="row">
-
-				<img src="assets/img/tourntrav.png">
-				<div class="main-row">
-					<div class="row-text">
-						<h6>Development</h6>
-					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
-					</div>
-				</div>
-				<h3>Mobile app landing design & Services</h3>
-			</div>
-
-			<div class="row">
-				<img src="assets/img/pengaduan.png">
-				<div class="main-row">
-					<div class="row-text">
-						<h6>Development</h6>
-					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
-					</div>
-				</div>
-				<h3>Mobile app landing design & Services</h3>
-			</div>
-
-			<div class="row">
-				<img src="assets/img/finata.png">
-				<div class="main-row">
-					<div class="row-text">
-						<h6>Development</h6>
-					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
-					</div>
-				</div>
-				<h3>Mobile app landing design & Services</h3>
-			</div>
-
-			<div class="row">
-				<img src="assets/img/ionix.png">
-				<div class="main-row">
-					<div class="row-text">
-						<h6>Development</h6>
-					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
-					</div>
-				</div>
-				<h3>Mobile app landing design & Services</h3>
-			</div>
-		</div>
-      </div> -->
       </div>
     </section>
     <!-- sesi kontak sy ini -->
@@ -253,7 +198,7 @@
       </div>
 
       <div class="contact-form">
-        <form onsubmit="sendContact(event)">
+        <form onsubmit="sendContact(event)" id="formm">
           <input type="name" placeholder="Your Name" required="" id="nameInput" />
           <input type="email" placeholder="Insert Your Email Here" id="emailInput" />
           <input type="" placeholder="Your Phone Number (Optional)" id="numberInput" />
@@ -317,7 +262,7 @@
           ],
         };
 
-        const webhookUrl = 'https://discord.com/api/webhooks/1056927181730746389/2EACF3YfKFpudMMrE0n-qbvzINOF8C4CNK3AS86ZpQgQ55EoevTfEviKll9ymgHX3Tav';
+        const webhookUrl = 'https://discord.com/api/webhooks/1059483931797360691/GzHceQR3aXvVkGDYc7qUUEE195vRNW47F080O20yAtW-_d0VOiZD3E0qhNsceV6yrl8I';
 
         const response = await fetch(webhookUrl, {
           method: 'POST',
@@ -333,6 +278,16 @@
           alert('Mff untuk pengiriman email masi ada kendala!');
         }
       }
+      const form = document.getElementById('formm');
+
+      form.addEventListener('submit', function handleSubmit(event) {
+        event.preventDefault();
+
+        // 👇️ Send data to server here
+
+        // 👇️ Reset form here
+        form.reset();
+      });
     </script>
   </body>
 </html>

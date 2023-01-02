@@ -738,7 +738,33 @@ form textarea {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 800px) {
+  h1 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .navlist {
+    flex-direction: row;
+  }
+  .navlist a {
+    margin-left: 10px;
+  }
+  #menu-icon {
+    display: block;
+  }
   .hero-img img {
     width: 100%;
     height: auto;

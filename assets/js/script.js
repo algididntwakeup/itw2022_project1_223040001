@@ -181,6 +181,10 @@ async function sendContact(ev) {
     alert('Mff untuk pengiriman email masi ada kendala!');
   }
 }
+$('.option').click(function () {
+  $('.option').removeClass('active');
+  $(this).addClass('active');
+});
 
 // async function sendContact(ev) {
 //   ev.preventDefault();
