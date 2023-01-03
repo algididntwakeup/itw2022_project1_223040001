@@ -750,21 +750,50 @@ form textarea {
   }
 }
 
-@media (max-width: 500px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-  .navlist {
-    flex-direction: row;
-  }
-  .navlist a {
-    margin-left: 10px;
-  }
+@media (max-width: 990px) {
   #menu-icon {
     display: block;
   }
+  .navlist {
+    position: absolute;
+    top: 100px;
+    right: -100%;
+    width: 300px;
+    height: 40vh;
+    background: #4d6199;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all 0.55s ease;
+  }
+  .navlist a {
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
+  }
+  .navlist.open {
+    right: 0;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    text-align: center;
+    order: 2;
+  }
+  .about-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
   .hero-img img {
     width: 100%;
     height: auto;
